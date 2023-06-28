@@ -28,9 +28,8 @@ print(filtered_list)
 
 def bmi(person):
     bmi_calc = round(person['weight_kg'] / person['height_meters'] ** 2, 1)
-    # return {person['BMI'] = bmi_calc}
-    # return { bmi_calc: person['BMI']}
-    return person.update({'BMI': bmi_calc})
+    new_list = {**person, 'bmi': bmi_calc}
+    return new_list
 
 
 def calc_bmi(list_people):
