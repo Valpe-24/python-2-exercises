@@ -23,4 +23,32 @@ def filter_males(list_people):
 
 
 filtered_list = filter_males(people_list)
-print()
+print(filtered_list)
+
+
+def bmi(person):
+    bmi_calc = round(person['weight_kg'] / person['height_meters'] ** 2, 1)
+    # return {person['BMI'] = bmi_calc}
+    # return { bmi_calc: person['BMI']}
+    return person.update({'BMI': bmi_calc})
+
+
+def calc_bmi(list_people):
+    new_list = list(map(bmi, list_people))
+    return new_list
+
+
+people_list_2 = [
+    {'id': 2, 'name': 'bob',     'weight_kg': 90, 'height_meters': 1.7},
+    {'id': 3, 'name': 'charlie', 'weight_kg': 80, 'height_meters': 1.8},
+]
+new_people_list = calc_bmi(people_list_2)
+print(new_people_list)
+
+
+def get_people(list_people):
+    new_list = [p['name'] for p in list_people if p['age'] >= 15]
+    return new_list
+
+
+print(get_people(people_list))

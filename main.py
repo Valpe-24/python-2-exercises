@@ -10,6 +10,7 @@ def main():
     solutions.sort_people(solutions.people_list, 'age', 'asc')
     print(solutions.people_list)
 
+    print(solutions.filter_males(solutions.people_list))
 
 
 if __name__ == '__main__':
