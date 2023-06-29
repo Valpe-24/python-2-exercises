@@ -1,4 +1,5 @@
 from pprint import pprint
+from WordCounter import WordCounter
 
 
 def sort_people(list_people, sort_by, asc_desc):
@@ -51,3 +52,13 @@ def get_people(list_people):
 
 
 print(get_people(people_list))
+
+#  Ex5
+
+sentence = "This is a test of the emergency broadcast system"
+word_counter = WordCounter(sentence)
+word_counter.count_words()
+print(word_counter.get_word_count())
+print(word_counter.get_shortest_word())
+print(word_counter.get_longest_word())
+
