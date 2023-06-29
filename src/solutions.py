@@ -1,5 +1,6 @@
 from pprint import pprint
 from WordCounter import WordCounter
+from TaxMan import TaxMan
 
 
 def sort_people(list_people, sort_by, asc_desc):
@@ -61,4 +62,16 @@ word_counter.count_words()
 print(word_counter.get_word_count())
 print(word_counter.get_shortest_word())
 print(word_counter.get_longest_word())
+
+
+#  Ex6
+
+items = [
+    {"id": 1, "desc": "clock", "price": 1.00},
+    {"id": 2, "desc": "socks", "price": 2.00},
+    {"id": 3, "desc": "razor", "price": 3.00},
+]
+tm = TaxMan(items, "10%")
+tm.calc_total()
+print(tm.get_total())
 

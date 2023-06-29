@@ -10,7 +10,6 @@ class WordCounter:
         return len(self.words)
 
     def get_shortest_word(self):
-
         letters = len(self.words[0].split())
 
         for word in self.words:
